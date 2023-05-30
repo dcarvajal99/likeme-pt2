@@ -10,10 +10,8 @@ const pool = new Pool({
 
 const getData = async () => {
     const result = await pool.query("Select * from posts");
-
-    console.log(result.rows);
+    console.log("Query realizada");    
     return (result.rows);
-
 }
 
 const insertData = async (titulo, img, descripcion) => {
@@ -27,7 +25,14 @@ const insertLike = async (id) => {
     const update = "UPDATE posts SET likes = (likes + 1) where id = $1";
     const values = [id];
     const result = await pool.query(update, values);
-    console.log("post agregado");
+    console.log("like agregado");
 }
 
-module.exports = { insertData, getData, insertLike };
+const deletePost = async (id) => {
+    const update = "DELETE FROM posts where id = $1";
+    const values = [id];
+    const result = await pool.query(update, values);
+    console.log("post eliminado");
+}
+
+module.exports = { insertData, getData, insertLike, deletePost };

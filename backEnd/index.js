@@ -1,5 +1,5 @@
 const express = require('express');
-const { getData, insertData, insertLike} = require('./query');
+const { getData, insertData, insertLike, deletePost} = require('./query');
 const app = express();
 const cors = require('cors');
 
@@ -22,10 +22,16 @@ app.post('/posts',  (req, res) => {
     res.send("producto agregado con exito")
 })
 
+// agregar likes
 app.put('/posts/like/:id', (req, res) => {
     const {id} = req.params;
     insertLike(id)
     res.send("like agregado")
 })
 
-
+// eliminar un post
+app.delete('/posts/:id', (req, res) => {
+    const {id} = req.params;
+    deletePost(id)
+    res.send("post eliminado")
+})
