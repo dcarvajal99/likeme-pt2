@@ -14,9 +14,9 @@ const getData = async () => {
     return (result.rows);
 }
 
-const insertData = async (titulo, img, descripcion) => {
+const insertData = async (titulo, url, descripcion) => {
     const insert = "INSERT INTO posts values (DEFAULT, $1, $2, $3, 0)";
-    const values = [titulo, img, descripcion];
+    const values = [titulo, url, descripcion];
     const result = await pool.query(insert, values);
     console.log("post agregado");
 }
