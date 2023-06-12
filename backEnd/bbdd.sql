@@ -1,4 +1,7 @@
 CREATE DATABASE likeme;
+
+\c likeme;
+
 CREATE TABLE posts (
     id SERIAL,
     titulo VARCHAR(25),
