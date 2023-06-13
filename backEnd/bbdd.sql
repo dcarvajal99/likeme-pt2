@@ -1,6 +1,7 @@
 CREATE DATABASE likeme;
 
 \c likeme;
+drop table posts;
 
 CREATE TABLE posts (
     id SERIAL,
