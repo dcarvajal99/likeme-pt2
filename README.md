@@ -10,7 +10,6 @@ En este proyecto se realiza la integracion de un servidor node en donde:
   
 3.captura los posibles errores en una consulta SQL realizada con el paquete pg usando la sentencia try catch.
 
-se crean rutas GET y POST para realizar consultas y guardar los posts en una base de datos PostgreSQL con el paquete pg.
 
 ![image](https://github.com/dcarvajal99/likeme/assets/113071563/f39e9507-d472-4b15-bbf7-bc03ec7c90e8)
 
