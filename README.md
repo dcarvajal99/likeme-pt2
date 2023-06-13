@@ -3,6 +3,7 @@
 La red social “Like Me” está apenas iniciando el proceso de desarrollo, se encuentra estudiando el mercado y analizando la competencia y ha descubierto que el éxito de esta industria se enfoca en los likes de los posts emitidos por los usuarios, por lo que decidió iniciar con el desarrollo de la lógica correspondiente a la creación de posts y a la interacción de likes que este puede tener.
 
 En este proyecto se realiza la integracion de un servidor node en donde:
+
 1.Se Agrega una ruta PUT en una API REST y utiliza para modificar registros en una tabla alojada en PostgreSQL.
   
 2.Se agrega una ruta DELETE en una API REST y utiliza para eliminar registros en una tabla alojada en PostgreSQL.
